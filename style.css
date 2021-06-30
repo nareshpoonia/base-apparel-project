@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+}
+body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  /* border: 5px solid red; */
+  margin-top: 20px;
+}
+
+.logo {
+  width: 30%;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-image {
+  margin-bottom: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+.coming-soon {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.message {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  color: var(--desaturated-red);
+  margin-bottom: 20px;
+}
+
+.first-para {
+  color: var(--desaturated-red);
+  justify-content: center;
+  font-weight: 400;
+}
+
+.second-para {
+  font-weight: 600;
+}
+
+.email {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
