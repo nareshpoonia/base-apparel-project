@@ -6,6 +6,10 @@
   --desaturated-red: hsl(0, 36%, 70%);
   --soft-red: hsl(0, 93%, 68%);
   --dark-grayish-red: hsl(0, 6%, 24%);
+  --input-border: hsl(0, 36%, 70%);
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
 }
 body {
   font-size: 16px;
@@ -18,6 +22,7 @@ body {
   width: 30%;
   margin-bottom: 30px;
   margin-left: 20px;
+  order: 1;
 }
 
 .wrapper {
@@ -30,8 +35,28 @@ body {
   max-width: 100%;
   height: auto;
   margin-bottom: 50px;
+  order: 2;
+  position: relative;
+  top: -300px;
 }
 
+section {
+  order: 3;
+}
+
+form {
+  order: 4;
+  position: relative;
+  top: 350px;
+}
+
+footer {
+  order: 5;
+}
+
+.hero-desktop {
+  display: none;
+}
 .coming-soon {
   margin-left: 20px;
   margin-right: 20px;
@@ -39,6 +64,9 @@ body {
   text-transform: uppercase;
   line-height: 1.3;
   margin-bottom: 20px;
+  order: 3;
+  position: relative;
+  top: 320px;
 }
 
 .message {
@@ -47,6 +75,9 @@ body {
   text-align: center;
   color: var(--desaturated-red);
   margin-bottom: 30px;
+  position: relative;
+  top: 330px;
+  line-height: 1.6;
 }
 
 .first-para {
@@ -66,15 +97,77 @@ body {
   margin-right: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
+  border: 2px solid var(--input-border);
   border-radius: 20px;
   width: 80%;
 }
+
+.email:focus {
+  border-color: hsl(--input-focus-h, --input-focus-s, --input-focus-l);
+}
+
+::placeholder {
+  color: var(--desaturated-red);
+}
+
 button {
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   padding-left: 30px;
   padding-right: 30px;
   border-radius: 30px;
   padding-top: 10px;
-  padding-bottom: 15px;
+  padding-bottom: 17px;
   margin-left: -75px;
+  border: var(--input-border);
+}
+
+footer {
+  position: relative;
+  top: 80px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 30%;
+    margin-bottom: 60px;
+    margin-left: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 150px;
+    margin-right: 40px;
+  }
+  .hero-desktop {
+    display: block;
+    height: auto;
+  }
+  .hero-image {
+    display: none;
+  }
+  .coming-soon {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    text-align: left;
+  }
+  .message {
+    position: static;
+    text-align: left;
+  }
+  form {
+    position: static;
+  }
+  button {
+    margin-left: 50px;
+  }
+  .desk-left {
+    margin-left: 40px;
+    padding-right: 40px;
+    align-items: stretch;
+    border: 2px solid var(--desaturated-red);
+  }
 }

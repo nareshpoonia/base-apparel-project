@@ -34,51 +34,61 @@
   </head>
   <body>
     <div class="wrapper">
-      <img src="/images/logo.svg" class="logo" alt="logo" /> <br />
-      <img
-        src="/images/hero-mobile.jpg"
-        class="hero-image"
-        alt="hero image"
-        width="375px"
-        height="250px"
-      />
-      <section>
-        <h2 class="coming-soon">
-          <span class="first-para">We're</span> <br />
-          <span class="second-para"
-            >coming <br />
-            soon</span
-          >
-        </h2>
-        <p class="message">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
-        </p>
-      </section>
-
-      <!-- <label for="email">Email Address</label> -->
-      <form>
-        <input
-          class="email"
-          type="email"
-          name="Email Address"
-          placeholder="      Email Address"
-          id=""
+      <div class="desk-left">
+        <div class="logo"><img src="/images/logo.svg" alt="logo" /></div>
+        <section>
+          <h2 class="coming-soon">
+            <span class="first-para">We're</span> <br />
+            <span class="second-para"
+              >coming <br />
+              soon</span
+            >
+          </h2>
+          <p class="message">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+        </section>
+        <form>
+          <!-- <label for="email">Email Address</label> -->
+          <input
+            class="email"
+            type="email"
+            name="Email Address"
+            placeholder="      Email Address"
+            id=""
+          />
+          <button>
+            <img src="/images/icon-arrow.svg" alt="arrow" />
+          </button>
+        </form>
+      </div>
+      <div class="hero-image">
+        <img
+          src="/images/hero-mobile.jpg"
+          alt="hero image"
+          width="375px"
+          height="250px"
         />
-        <button>
-          <img src="/images/icon-arrow.svg" alt="arrow" />
-        </button>
-      </form>
+      </div>
 
-      <footer>
-        <p class="attribution">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by <a href="https://www.nareshpoonia.com">Naresh Poonia</a>.
-        </p>
-      </footer>
+      <div class="hero-desktop">
+        <img
+          src="/images/hero-desktop.jpg"
+          alt="hero image"
+          width="610px"
+          height="800px"
+        />
+      </div>
     </div>
   </body>
+  <footer>
+    <p class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://www.nareshpoonia.com">Naresh Poonia</a>.
+    </p>
+  </footer>
 </html>
