@@ -16,7 +16,6 @@
 body {
   font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
-  /* border: 5px solid red; */
   margin-top: 30px;
 }
 
@@ -102,25 +101,30 @@ footer {
   color: var(--desaturated-red);
   font-weight: 400;
   letter-spacing: 8px;
+  display: block;
 }
 
 .second-para {
   font-weight: 600;
   letter-spacing: 8px;
+  display: block;
+}
+.third-para {
+  font-weight: 600;
+  letter-spacing: 8px;
 }
 
-.email {
+input {
   margin-bottom: 20px;
-  margin-left: 30px;
-  margin-right: 20px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+
+  padding: 15px;
+  border-radius: 50px;
   border: 2px solid var(--input-border);
-  border-radius: 20px;
-  width: 80%;
+
+  width: 100%;
 }
 
-.email:focus {
+input:focus {
   border-color: hsl(--input-focus-h, --input-focus-s, --input-focus-l);
 }
 
@@ -129,19 +133,20 @@ footer {
 }
 
 button {
+  position: absolute;
+  top: 0;
+  right: 10px;
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-  padding-left: 30px;
-  padding-right: 30px;
-  border-radius: 30px;
-  padding-top: 10px;
-  padding-bottom: 17px;
-  margin-left: -75px;
+  padding: 15px;
+  border-radius: 50px;
+
   border: var(--input-border);
 }
 
 footer {
   position: relative;
   top: 80px;
+  width: 100%;
 }
 
 @media (min-width: 414px) {
@@ -275,8 +280,9 @@ footer {
   }
   .logo {
     width: 30%;
+    margin-left: 0px;
     padding-bottom: 100px;
-    padding-left: 0px;
+    padding-left: 20px;
     padding-top: 60px;
     display: flex;
     flex-direction: column;
@@ -284,19 +290,20 @@ footer {
   .wrapper {
     display: flex;
     flex-direction: row;
+
     margin-top: 150px;
-    margin-right: 40px;
-    /* max-width: 1200px;
-    justify-content: center;
-    align-items: center; */
-    /* height: 600px; */
+    margin-bottom: 150px;
+    margin-right: 120px;
+    margin-left: 120px;
+    max-width: 1200px;
   }
   .hero-desktop {
     display: block;
     height: auto;
     flex: 1;
-    margin-right: 60px;
-    border: 2px solid var(--desaturated-red);
+
+    box-shadow: 0 5px 25px 0px rgba(0, 0, 0, 0.25);
+    width: 40%;
   }
   .hero-image {
     display: none;
@@ -313,21 +320,23 @@ footer {
     position: static;
     text-align: left;
   }
+
   form {
-    position: static;
+    position: relative;
+    top: 0px;
     margin-left: 0px;
     padding-left: 0px;
   }
 
-  .email {
+  input {
     margin-bottom: 20px;
-    margin-left: 17px;
-    margin-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+
+    padding: 15px;
+    border-radius: 50px;
     border: 2px solid var(--input-border);
-    border-radius: 20px;
-    width: 80%;
+
+    width: 90%;
+    height: 20px;
   }
 
   button {
@@ -336,29 +345,29 @@ footer {
       hsl(0, 80%, 86%),
       hsl(0, 74%, 74%)
     );
-    position: relative;
-    top: -52px;
-    right: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 30px;
-    padding-top: -200px;
-    padding-bottom: 17px;
-    margin-left: 350px;
-    margin-top: -300px;
+    position: absolute;
+    top: 0px;
+    right: -10px;
+    padding: 16px;
+    width: 100px;
+
     border: var(--input-border);
   }
   .desk-left {
-    margin-left: 120px;
-    padding-left: 80px;
-    padding-right: 80px;
-    /* align-items: stretch; */
-    border: 2px solid var(--desaturated-red);
+    box-shadow: 0 5px 25px 0px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 60%;
     flex: 1;
     background-image: linear-gradient(
       135deg,
       hsl(0, 0%, 100%),
       hsl(0, 100%, 98%)
     );
+  }
+  .break {
+    flex-basis: 100%;
+    height: 0;
   }
 }
