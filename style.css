@@ -35,19 +35,11 @@ img {
   display: flex;
   flex-direction: column;
   background-image: url(/images/bg-pattern-desktop.svg);
-  /* background-size: cover; */
-  /* background-image: linear-gradient(
-    135deg,
-    hsl(0, 0%, 100%),
-    hsl(0, 100%, 98%)
-  ); */
   max-width: 1200px;
+  box-shadow: 0 5px 25px 0px rgba(0, 0, 0, 0.25);
 }
 
 .hero-image {
-  /* width 100% and height auto, why? What's the default behaviour?*/
-  /* width: 100%; */
-  /* height: auto; */
   margin-bottom: 50px;
   position: relative;
 }
@@ -59,10 +51,8 @@ img {
   object-position: top;
 }
 
-/* please don't use generic element names in CSS, the next form you'll define will have conflict with this one */
 form {
   position: relative;
-  /* adding margin here so that it has some breathing space */
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -71,7 +61,6 @@ input {
   display: block;
   padding: 15px 30px;
   border-radius: 50px;
-  /* border: 2px solid var(--input-border); */
   width: 80%;
   height: 25px;
   margin: auto;
@@ -177,6 +166,11 @@ form.error small {
   font-weight: 600;
   letter-spacing: 8px;
 }
+.attribution {
+  margin-top: 20px;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
 
 @media (min-width: 1100px) {
   .logo {
@@ -194,11 +188,7 @@ form.error small {
     max-width: 1200px;
   }
   .hero-desktop {
-    /* This is a div. You want to give 100% width to the img element, not the div*/
     display: block;
-    /* this has no effect */
-    /* height: auto;
-      width: 100%; */
     flex: 1;
     box-shadow: 0 5px 25px 0px rgba(0, 0, 0, 0.25);
   }
@@ -229,7 +219,6 @@ form.error small {
     padding: 15px;
     border-radius: 50px;
     border: 2px solid var(--input-border);
-    /* 34px accunts for padding 15px and border of 2px defined above*/
     width: calc(100% - 34px);
     height: 25px;
     margin: 0;
@@ -253,8 +242,6 @@ form.error small {
   }
 
   .desk-left {
-    /* why box-shdow here? Even if you want to give it to the whole container, give it to the wrapper*/
-    box-shadow: 0 5px 25px 0px rgba(0, 0, 0, 0.25);
     justify-content: center;
     padding: 0 100px;
     flex: 1;
