@@ -29,48 +29,53 @@ img {
   margin-bottom: 30px;
   margin-left: 40px;
   margin-top: 20px;
-  order: 1;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(
+  background-image: url(/images/bg-pattern-desktop.svg);
+  /* background-size: cover; */
+  /* background-image: linear-gradient(
     135deg,
     hsl(0, 0%, 100%),
     hsl(0, 100%, 98%)
-  );
+  ); */
   max-width: 1200px;
 }
 
 .hero-image {
+  /* width 100% and height auto, why? What's the default behaviour?*/
+  /* width: 100%; */
+  /* height: auto; */
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.hero-image img {
   width: 100%;
   height: auto;
-  margin-bottom: 50px;
-  order: 2;
-  position: relative;
-  top: -300px;
+  object-fit: cover;
+  object-position: top;
 }
 
-section {
-  order: 3;
-}
-
+/* please don't use generic element names in CSS, the next form you'll define will have conflict with this one */
 form {
-  order: 4;
   position: relative;
-  top: 350px;
+  /* adding margin here so that it has some breathing space */
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 input {
-  margin-bottom: 20px;
-  padding: 15px;
+  display: block;
+  padding: 15px 30px;
   border-radius: 50px;
-  border: 2px solid var(--input-border);
+  /* border: 2px solid var(--input-border); */
   width: 80%;
   height: 25px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 input:focus {
@@ -84,15 +89,20 @@ input:focus {
 button {
   position: absolute;
   top: 0px;
-  right: 100px;
+  right: 1%;
   height: 30px;
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   border: none;
-  padding: 15px;
+  padding: 15px 5px;
   width: 100px;
   border-radius: 50px;
   border: var(--input-border);
 }
+
+button:hover {
+  opacity: 0.6;
+}
+
 /* Centering button arrow */
 .button-arrow {
   margin-left: auto;
@@ -100,12 +110,34 @@ button {
   width: 20%;
 }
 
-footer {
-  order: 5;
-}
-
 .hero-desktop {
   display: none;
+}
+
+small {
+  display: none;
+  margin-left: 20px;
+  margin-top: 10px;
+  color: var(--soft-red);
+}
+
+form.error input {
+  border: 2px solid var(--input-border);
+}
+
+form.error .error-icon {
+  display: block;
+}
+
+form.error small {
+  display: block;
+}
+
+.error-icon {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 130px;
 }
 
 .coming-soon {
@@ -113,11 +145,10 @@ footer {
   margin-right: 20px;
   text-align: center;
   text-transform: uppercase;
+  font-size: 3em;
   line-height: 1.3;
   margin-bottom: 20px;
-  order: 3;
   position: relative;
-  top: 320px;
 }
 
 .message {
@@ -127,7 +158,6 @@ footer {
   color: var(--desaturated-red);
   margin-bottom: 30px;
   position: relative;
-  top: 330px;
   line-height: 1.6;
 }
 
@@ -159,19 +189,16 @@ footer {
     flex-direction: column;
   }
   .wrapper {
-    display: flex;
     flex-direction: row;
-
-    margin-top: 150px;
-    margin-bottom: 150px;
-    margin-right: 120px;
-    margin-left: 120px;
+    margin: 150px auto 0;
     max-width: 1200px;
   }
   .hero-desktop {
+    /* This is a div. You want to give 100% width to the img element, not the div*/
     display: block;
-    height: auto;
-    width: 100%;
+    /* this has no effect */
+    /* height: auto;
+      width: 100%; */
     flex: 1;
     box-shadow: 0 5px 25px 0px rgba(0, 0, 0, 0.25);
   }
@@ -199,15 +226,13 @@ footer {
   }
 
   input {
-    margin-bottom: 20px;
-
     padding: 15px;
     border-radius: 50px;
     border: 2px solid var(--input-border);
-
-    width: 100%;
+    /* 34px accunts for padding 15px and border of 2px defined above*/
+    width: calc(100% - 34px);
     height: 25px;
-    margin-left: 0px;
+    margin: 0;
   }
 
   button {
@@ -216,22 +241,22 @@ footer {
       hsl(0, 80%, 86%),
       hsl(0, 74%, 74%)
     );
-
     position: absolute;
-    top: 0px;
-    right: -40px;
+    top: 0;
+    right: 0;
     padding: 16px;
     width: 90px;
     height: 27px;
     box-shadow: 0 5px 25px 5px rgba(0, 0, 0, 0.25);
     border: var(--input-border);
-    margin-right: 0px;
+    margin-right: 0;
   }
+
   .desk-left {
+    /* why box-shdow here? Even if you want to give it to the whole container, give it to the wrapper*/
     box-shadow: 0 5px 25px 0px rgba(0, 0, 0, 0.25);
     justify-content: center;
-    padding-left: 40px;
-    padding-right: 50px;
+    padding: 0 100px;
     flex: 1;
   }
 }
