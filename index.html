@@ -33,20 +33,22 @@
     </style>
   </head>
   <body>
-    <div role="main" class="wrapper">
+    <div class="wrapper">
       <div class="desk-left">
-        <div role="img" class="logo">
+        <div role="banner" class="logo">
           <img src="/images/logo.svg" alt="logo" />
         </div>
-        <div role="img" class="hero-image">
+        <div class="hero-image">
           <img
+            role="img"
+            aria-labelledby="hero-image"
             src="/images/hero-mobile.jpg"
             alt="hero image"
             width="375px"
             height="250px"
           />
         </div>
-        <section role="region">
+        <section role="main">
           <h1 class="coming-soon">
             <span class="first-para">We're</span>
             <span class="second-para">coming</span>
@@ -58,7 +60,7 @@
             and our launch deals.
           </p>
         </section>
-        <form role="textbox" id="form">
+        <form role="form" id="form">
           <input
             id="email"
             type="email"
@@ -78,8 +80,10 @@
         </form>
       </div>
 
-      <div role="img" class="hero-desktop">
+      <div class="hero-desktop">
         <img
+          role="img"
+          aria-labelledby="hero-desktop"
           src="/images/hero-desktop.jpg"
           alt="hero image"
           width="610px"
